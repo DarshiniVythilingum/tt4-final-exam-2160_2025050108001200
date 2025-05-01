@@ -7,7 +7,7 @@ WORKDIR /src
 ENV PATH="$PATH:/root/.dotnet/tools"
 
 # like .csproj = package.json package-lock.json ... *.json
-COPY *.csproj .
+COPY *./backend.csproj .
 
 # like npm install
 RUN dotnet restore

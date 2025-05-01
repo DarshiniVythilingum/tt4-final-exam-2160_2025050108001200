@@ -1,13 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Frontend</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug Tracker</title>
+    <link rel="stylesheet" href="../src/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bug Tracker System</h1>
+      <button id="createBugBtn">Create New Bug</button>
+    </header>
+
+    <section id="bugListContainer"></section>
+
+    <div id="createBugModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <h2>Create New Bug</h2>
+        <form id="bugForm">
+          <label for="bugTitle">Title:</label>
+          <input type="text" id="bugTitle" required />
+
+          <label for="bugDescription">Description:</label>
+          <textarea id="bugDescription" required></textarea>
+
+          <label for="bugPriority">Priority:</label>
+          <select id="bugPriority" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+
+          <button type="submit">Create Bug</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../src/app.js"></script>
+  </body>
 </html>
